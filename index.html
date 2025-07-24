@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You Want to Pass?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #eee;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #ff9800;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .testimonial {
+      background-color: #222;
+      border-left: 4px solid #ff9800;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+    }
+    .testimonial strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #ff9800;
+    }
+    .testimonial img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .contact {
+      background-color: #333;
+      padding: 30px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+    .contact p {
+      font-size: 1.1em;
+    }
+    a {
+      color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+<section style="text-align:center; padding: 20px; background-color: #1a1a1a;">
+  <h2 style="color: #ff9800;">⏳ Time Left to Get Certified</h2>
+  <div id="countdown" style="font-size: 2em; font-weight: bold; color: #fff;"></div>
+  <p style="color: #ccc;">Offer ends at midnight — don’t miss out!</p>
+</section>
+
+  <header>
+    <h1>You Want to Pass?</h1>
+    <p>Let me help you succeed — just like I’ve helped many others.<br>
+    ✅ Get your Certificate in <strong>30 minutes</strong><br>
+    ⏰ <strong>Exam Ends Tomorrow – Act Fast!</strong></p>
+    <a href="https://wa.me/27679898434" class="cta-button">Book Your Session Now</a>
+  </header>
+
+  <section>
+    <h2>🌟 What People Are Saying</h2>
+
+    <div class="testimonial">
+      <strong>Gumede N</strong>
+      “I was stuck at week 1 for months, but after your coaching, I finally got Cert. Thank you!”
+      <img src="img/thandeka.png" alt="Certificate Proof 1">
+    </div>
+
+    <div class="testimonial">
+      <strong>Fatima A</strong>
+      “You broke things down in a way that just made sense. I passed on my first try — without doing anything!”
+      <img src="img/simba.png" alt="Certificate Proof 2">
+    </div>
+
+    <div class="testimonial">
+      <strong>Ngobese Z</strong>
+      “Yohh, I didn’t study but this helped me *a lot*. Thank you!!”
+      <img src="img/cuz.png" alt="Certificate Proof 3">
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>📞 Contact Me</h2>
+    <p>Secure your session now and get your certificate fast.</p>
+    <p><strong>WhatsApp Me:</strong> <a href="https://wa.me/27679898434">Click to Chat</a></p>
+    <p style="color: #ff4c4c;"><strong>Note:</strong> Payment confirms your session. Please send proof via WhatsApp.</p>
+  </section>
+
+  <script>
+  // Set the deadline: 25 July 00:00 AM (local time)
+  const deadline = new Date("July 25, 2025 00:00:00").getTime();
+
+  const countdown = document.getElementById("countdown");
+
+  const x = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = deadline - now;
+
+    if (distance < 0) {
+      clearInterval(x);
+      countdown.innerHTML = "⏰ Time's up!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+</script>
+
+</body>
+</html>
